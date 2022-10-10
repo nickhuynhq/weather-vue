@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import axios from "axios";
+import { useRouter } from "vue-router";
 
 const API_KEY = "f3f2eb8da178081b60066bdf34143e33";
 const searchQuery = ref("");
@@ -24,12 +25,31 @@ const getSearchResults = () => {
       } catch {
         searchError.value(true);
       }
-
       return;
     }
     querySearchResults.value = null;
   }, 300);
 };
+
+const router = useRouter();
+
+const previewCity = (searchResult) => {
+  const city = searchResult.name;
+  const state = searchResult.state;
+  const country = searchResult.country;
+  console.log(city, state, country)
+
+  router.push({
+    name: 'cityView',
+    params: {state: state, city: city},
+    query: {
+      lat: searchResult.lat,
+      lon: searchResult.lon,
+      country: country,
+      preview: true,
+    }
+  })
+}
 </script>
 
 <template>
@@ -57,6 +77,7 @@ const getSearchResults = () => {
             v-for="searchResult in querySearchResults"
             :key="searchResult.id"
             class="py-2 cursor-pointer"
+            @click="previewCity(searchResult)"
           >
             {{ searchResult.name }}, {{ searchResult.state }}, {{ searchResult.country }}
           </li>
