@@ -1,12 +1,12 @@
 <template>
-  <header class="sticky top-0 bg-weather-primary shadow-lg">
+  <header class="sticky top-0 bg-header shadow-lg">
     <nav
       class="container flex flex-col sm:flex-row items-center gap-4 text-white py-6"
     >
       <RouterLink :to="{ name: 'home' }">
         <div class="flex items-center gap-3">
-          <i class="fa-solid fa-sun text-2xl" />
-          <p class="text-2xl">The Local Weather</p>
+          <i class="fa-brands fa-vuejs text-3xl"></i>
+          <p class="text-2xl">Weather Vue</p>
         </div>
       </RouterLink>
 
@@ -75,8 +75,8 @@ const addCity = () => {
     state: route.params.state,
     city: route.params.city,
     coords: {
+      lon: route.query.lon,
       lat: route.query.lat,
-      lng: route.query.lng,
     },
   };
 

@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import axios from "axios";
 import { useRouter } from "vue-router";
+import CityList from "../components/CityList.vue";
 
 const API_KEY = "f3f2eb8da178081b60066bdf34143e33";
 const searchQuery = ref("");
@@ -84,6 +85,14 @@ const previewCity = (searchResult) => {
         </template>
         
       </ul>
+    </div>
+    <div class="flex flex-col gap-4">
+      <Suspense>
+        <CityList />
+        <template #fallback>
+          <p>Loading...</p>
+        </template>
+      </Suspense>
     </div>
   </main>
 </template>
