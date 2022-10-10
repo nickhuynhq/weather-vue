@@ -87,6 +87,7 @@ const addCity = () => {
   // Remove the preview from route when the City is added
   let query = Object.assign({}, route.query);
   delete query.preview;
+  query.id = locationObj.id;
   router.replace({ query });
 };
 

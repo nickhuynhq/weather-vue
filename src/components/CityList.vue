@@ -1,6 +1,6 @@
 <template>
   <div v-for="city in savedCities" :key="city.id">
-    <CityCard :city="city" @click="goToCityView(city)"/>
+    <CityCard :city="city" @click="goToCityView(city)" />
   </div>
 
   <p v-if="savedCities.length === 0">
@@ -17,7 +17,6 @@ import CityCard from "./CityCard.vue";
 const savedCities = ref([]);
 const API_KEY = "f3f2eb8da178081b60066bdf34143e33";
 const getCities = async () => {
-  
   if (localStorage.getItem("savedCities")) {
     savedCities.value = JSON.parse(localStorage.getItem("savedCities"));
     const requests = [];
@@ -39,9 +38,9 @@ await getCities();
 const router = useRouter();
 const goToCityView = (city) => {
   router.push({
-    name: 'cityView',
-    params: {state: city.state, city: city.city},
-    query: {lat: city.coords.lat, lon: city.coords.lon},
+    name: "cityView",
+    params: { state: city.state, city: city.city },
+    query: { id: city.id, lat: city.coords.lat, lon: city.coords.lon },
   });
-}
+};
 </script>
