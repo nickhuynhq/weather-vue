@@ -1,15 +1,7 @@
 <template>
   <header class="sticky top-0 bg-weather-primary shadow-lg">
     <nav
-      class="
-        container
-        flex flex-col
-        sm:flex-row
-        items-center
-        gap-4
-        text-white
-        py-6
-      "
+      class="container flex flex-col sm:flex-row items-center gap-4 text-white py-6"
     >
       <RouterLink :to="{ name: 'home' }">
         <div class="flex items-center gap-3">
@@ -20,23 +12,13 @@
 
       <div class="flex gap-3 flex-1 justify-end">
         <i
-          class="
-            fa-solid fa-circle-info
-            text-xl
-            hover:text-weather-secondary
-            duration-150
-            cursor-pointer
-          "
+          class="fa-solid fa-circle-info text-xl hover:text-weather-secondary duration-150 cursor-pointer"
           @click="toggleModal"
         />
         <i
-          class="
-            fa-solid fa-plus
-            text-xl
-            hover:text-weather-secondary
-            duration-150
-            cursor-pointer
-          "
+          class="fa-solid fa-plus text-xl hover:text-weather-secondary duration-150 cursor-pointer"
+          @click="addCity"
+          v-if="route.query.preview"
         />
       </div>
 
@@ -75,12 +57,41 @@
 </template>
 
 <script setup>
-    import { ref } from "vue";
-    import { RouterLink } from "vue-router";
-    import BaseModal from "./BaseModal.vue";
+import { ref } from "vue";
+import { RouterLink, useRoute, useRouter } from "vue-router";
+import BaseModal from "./BaseModal.vue";
+import { uid } from "uid";
 
-    const modalActive = ref(null);
-    const toggleModal = () => {
-    modalActive.value = !modalActive.value;
-    };
+const savedCities = ref([]);
+const route = useRoute();
+const router = useRouter();
+const addCity = () => {
+  if (localStorage.getItem("saved")) {
+    savedCities.value = JSON.parse(localStorage.getItem("savedCities"));
+  }
+
+  const locationObj = {
+    id: uid(),
+    state: route.params.state,
+    city: route.params.city,
+    coords: {
+      lat: route.query.lat,
+      lng: route.query.lng,
+    },
+  };
+
+  // Set City in local storage
+  savedCities.value.push(locationObj);
+  localStorage.setItem("savedCities", JSON.stringify(savedCities.value));
+
+  // Remove the preview from route when the City is added
+  let query = Object.assign({}, route.query);
+  delete query.preview;
+  router.replace({ query });
+};
+
+const modalActive = ref(null);
+const toggleModal = () => {
+  modalActive.value = !modalActive.value;
+};
 </script>
