@@ -10,7 +10,7 @@ Please use this link to demo the live site!
 https://weather-vue-tw.netlify.app/
 
 ## Project Screenshot
-![App Screenshot]()
+![App Screenshot](https://firebasestorage.googleapis.com/v0/b/weather-vue-f1edf.appspot.com/o/weather-vue.jpg?alt=media&token=0a844faa-4f2e-4df7-8612-0740d23c7e62)
 
 ## Project DEMO
 ![App Demo]()
