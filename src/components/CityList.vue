@@ -1,12 +1,14 @@
-
 <template>
-  <div v-for="city in savedCities" :key="city.id">
-    <CityCard :city="city" @click="goToCityView(city)" />
-  </div>
+  <div>
+    <div v-for="city in savedCities" :key="city.id">
+      <CityCard :city="city" @click="goToCityView(city)" />
+    </div>
 
-  <p v-if="savedCities.length === 0">
-    No locations added. To start tracking a location, search in the field above.
-  </p>
+    <p v-if="savedCities.length === 0">
+      No locations added. To start tracking a location, search in the field
+      above.
+    </p>
+  </div>
 </template>
 
 <script setup>
@@ -14,8 +16,9 @@ import axios from "axios";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import CityCard from "./CityCard.vue";
+
 const savedCities = ref([]);
-const API_KEY = config.API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY;
 const getCities = async () => {
   if (localStorage.getItem("savedCities")) {
     savedCities.value = JSON.parse(localStorage.getItem("savedCities"));

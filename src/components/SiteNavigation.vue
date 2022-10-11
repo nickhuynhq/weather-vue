@@ -146,7 +146,7 @@ const toggleModal = () => {
   modalActive.value = !modalActive.value;
 };
 
-const API_KEY = config.API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY;
 const searchQuery = ref("");
 const searchLimit = 5;
 const searchError = ref(null);
