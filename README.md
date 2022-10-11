@@ -11,6 +11,8 @@
 - Deleting Cities
 
 This project was created to experiment with Tailwind CSS and is my first project using Vue.js! 😆
+Weather data is pulled from OpenWeatherMap's API:
+https://openweathermap.org/api
 
 All in all, got a great introduction to the Vue framework and learnt a new way of styling using Tailwind! 
 
