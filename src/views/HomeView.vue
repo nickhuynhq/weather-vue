@@ -40,16 +40,16 @@ const previewCity = (searchResult) => {
   const country = searchResult.country;
 
   router.push({
-    name: 'cityView',
-    params: {state: state, city: city},
+    name: "cityView",
+    params: { state: state, city: city },
     query: {
       lat: searchResult.lat,
       lon: searchResult.lon,
       country: country,
       preview: true,
-    }
-  })
-}
+    },
+  });
+};
 </script>
 
 <template>
@@ -63,27 +63,28 @@ const previewCity = (searchResult) => {
         class="py-2 px-1 w-full bg-transparent border-b focus:border-weather-secondary focus:outline-none focus:shadow-[0px_1px_0_0#004E71]"
       />
       <ul
-        class="flex items-center gap-3 rounded-md bg-alert text-text-secondary w-full shadow-md py-2 px-4 mt-4 top-[66px]"
+        class="flex flex-col gap-3 rounded-md bg-weather-secondary text-text-primary w-full shadow-md py-2 px-4 mt-4 top-[66px]"
         v-if="querySearchResults"
       >
-      <i class="fa-solid fa-triangle-exclamation" />
         <p v-if="searchError">
+          <i class="fa-solid fa-triangle-exclamation" />
           Uh oh, something went wrong, please try again.
         </p>
         <p v-if="!serverError && querySearchResults.length === 0">
+          <i class="fa-solid fa-triangle-exclamation" />
           No results match your query, please try a different term.
         </p>
         <template v-else>
           <li
             v-for="searchResult in querySearchResults"
             :key="searchResult.id"
-            class="py-2 cursor-pointer"
+            class="py-2 duration-150 hover:text-text-hover border-b-1 border-indigo-500 cursor-pointer"
             @click="previewCity(searchResult)"
           >
-            {{ searchResult.name }}, {{ searchResult.state }}, {{ searchResult.country }}
+            {{ searchResult.name }}, {{ searchResult.state }},
+            {{ searchResult.country }}
           </li>
         </template>
-        
       </ul>
     </div>
     <div class="flex flex-col gap-4">

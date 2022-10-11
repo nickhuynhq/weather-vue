@@ -31,12 +31,12 @@
 
       <BaseModal :modalActive="modalActive" @close-modal="toggleModal">
         <div class="text-black">
-          <h1 class="text-2xl mb-1">About:</h1>
+          <h1 class="text-2xl mb-1">About</h1>
           <p class="mb-4">
-            The Local Weather allows you to track the current and future weather
-            of cities of your choosing.
+            Weather Vue allows you to track the current and future weather
+            of cities of your choosing. <br/> This application was built with Vue.js and Tailwind CSS. 😀
           </p>
-          <h2 class="text-2xl">How it works:</h2>
+          <h2 class="text-2xl">How it works</h2>
           <ol class="list-decimal list-inside mb-4">
             <li>
               Search for your city by entering the name into the search bar.
