@@ -3,10 +3,11 @@
     <!-- Banner -->
     <div
       v-if="route.query.preview"
-      class="text-text-primary p-4 bg-weather-secondary w-full text-center"
+      class="flex justify-center items-center gap-2 text-text-secondary p-4 bg-alert w-full text-center"
     >
+      <i class="fa-solid fa-circle-info text-xl" />
       <p>
-        You are currently previewing this city, click the "+" icon to start
+        You are currently previewing this city, click the "+" icon at the top right to start
         tracking this city.
       </p>
     </div>

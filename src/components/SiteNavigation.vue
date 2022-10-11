@@ -5,7 +5,7 @@
     >
       <RouterLink :to="{ name: 'home' }">
         <div
-          class="flex items-center gap-3 duration-150 hover:text-text-hover hover:scale-105"
+          class="flex items-center gap-3 duration-150 hover:text-alert hover:scale-105"
         >
           <i class="fa-solid fa-sun text-3xl"></i>
           <p class="text-2xl">Weather Vue</p>
@@ -52,10 +52,15 @@
           </ol>
 
           <h2 class="text-2xl">Removing a city</h2>
-          <p>
+          <p class="mb-4">
             If you no longer wish to track a city, simply select the city within
             the home page. At the bottom of the page, there will be am option to
             delete the city.
+          </p>
+
+          <p>
+            Made with ❤️ in Toronto, Canada.<br/>
+            By Nicholas Huynh
           </p>
         </div>
       </BaseModal>
@@ -74,11 +79,11 @@
         class=" container flex flex-col gap-3 rounded-md bg-weather-secondary text-text-primary w-full shadow-md py-2 px-4 mt-4"
         v-if="querySearchResults"
       >
-        <p v-if="searchError">
+        <p v-if="searchError" class="p-2 rounded-md text-text-secondary bg-alert">
           <i class="fa-solid fa-triangle-exclamation" />
           Uh oh, something went wrong, please try again.
         </p>
-        <p v-if="!serverError && querySearchResults.length === 0">
+        <p v-if="!serverError && querySearchResults.length === 0" class="p-2 rounded-md text-text-secondary bg-alert">
           <i class="fa-solid fa-triangle-exclamation" />
           No results match your query, please try a different term.
         </p>
