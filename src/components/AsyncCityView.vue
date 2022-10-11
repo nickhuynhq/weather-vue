@@ -49,7 +49,7 @@
     <!-- Hourly Weather -->
     <div class="max-w-screen-md w-full py-12 ">
       <div class="mx-8 text-text-primary dark:text-text-primary--light">
-        <h2 class="mb-4">Hourly Weather</h2>
+        <h2 class="mb-4 text-2xl">Hourly Weather</h2>
         <div class="flex gap-10 overflow-x-scroll">
           <div
             v-for="hourData in weatherData.hourly"
@@ -78,7 +78,7 @@
     <!-- Weekly Weather -->
     <div class="max-w-screen-md w-full py-12">
       <div class="mx-8 text-text-primary dark:text-text-primary--light">
-        <h2 class="mb-4">7 Day Forecast</h2>
+        <h2 class="mb-4 text-2xl">7 Day Forecast</h2>
         <div
           v-for="day in weatherData.daily"
           :key="day.dt"
