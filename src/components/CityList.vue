@@ -28,6 +28,10 @@ const getCities = async () => {
       );
     });
     const weatherData = await Promise.all(requests);
+
+    // Flicker delay
+    await new Promise((res) => setTimeout(res, 300));
+
     weatherData.forEach((value, index) => {
       savedCities.value[index].weather = value.data;
     });
