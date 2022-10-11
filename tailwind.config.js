@@ -7,6 +7,7 @@ module.exports = {
         "header": "#2e3440",
         "weather-primary": "#4c566a",
         "weather-secondary": "#2e3440",
+        "alert": "#ebcb8b",
         "text-primary": "white",
         "text-secondary": "black",
         "text-hover": "#a3be8c",

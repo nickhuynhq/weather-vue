@@ -20,10 +20,9 @@ const getSearchResults = () => {
     if (searchQuery.value) {
       try {
         const result = await axios.get(
-          `http://api.openweathermap.org/geo/1.0/direct?q=${searchQuery.value}&limit=${searchLimit}&appid=${API_KEY}`
+          `https://api.openweathermap.org/geo/1.0/direct?q=${searchQuery.value}&limit=${searchLimit}&appid=${API_KEY}`
         );
         querySearchResults.value = result.data;
-        console.log(querySearchResults);
       } catch {
         searchError.value(true);
       }
@@ -39,7 +38,6 @@ const previewCity = (searchResult) => {
   const city = searchResult.name;
   const state = searchResult.state;
   const country = searchResult.country;
-  console.log(city, state, country)
 
   router.push({
     name: 'cityView',
@@ -65,9 +63,10 @@ const previewCity = (searchResult) => {
         class="py-2 px-1 w-full bg-transparent border-b focus:border-weather-secondary focus:outline-none focus:shadow-[0px_1px_0_0#004E71]"
       />
       <ul
-        class="absolute bg-weather-secondary text-text-primary w-full shadow-md py-2 px-1 top-[66px]"
+        class="flex items-center gap-3 rounded-md bg-alert text-text-secondary w-full shadow-md py-2 px-4 mt-4 top-[66px]"
         v-if="querySearchResults"
       >
+      <i class="fa-solid fa-triangle-exclamation" />
         <p v-if="searchError">
           Uh oh, something went wrong, please try again.
         </p>

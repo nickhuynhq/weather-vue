@@ -4,22 +4,29 @@
       class="container flex flex-col sm:flex-row items-center gap-4 text-text-primary py-6"
     >
       <RouterLink :to="{ name: 'home' }">
-        <div class="flex items-center gap-3 duration-150 hover:text-text-hover hover:scale-105">
-          <i class="fa-brands fa-vuejs text-3xl"></i>
+        <div
+          class="flex items-center gap-3 duration-150 hover:text-text-hover hover:scale-105"
+        >
+          <i class="fa-solid fa-sun text-3xl"></i>
           <p class="text-2xl">Weather Vue</p>
         </div>
       </RouterLink>
 
       <div class="flex gap-3 flex-1 justify-end">
-        <i
-          class="fa-solid fa-circle-info text-xl duration-150 hover:text-text-hover hover:scale-125 cursor-pointer"
+        <span
+          class="flex gap-2 justify-end items-center duration-150 hover:text-text-hover hover:scale-105 cursor-pointer"
           @click="toggleModal"
-        />
+        >
+          <i class="fa-solid fa-circle-info text-xl" />
+          <p>Info</p>
+        </span>
+
         <i
           class="fa-solid fa-plus text-xl hover:text-text-hover hover:scale-125 duration-150 cursor-pointer"
           @click="addCity"
           v-if="route.query.preview"
         />
+        
       </div>
 
       <BaseModal :modalActive="modalActive" @close-modal="toggleModal">

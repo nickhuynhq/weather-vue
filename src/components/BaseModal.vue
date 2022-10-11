@@ -10,11 +10,11 @@
         <Transition name="modal-inner">
           <div
             v-if="modalActive"
-            class="p-4 bg-text-primary self-start mt-32 max-w-screen-md"
+            class="flex flex-col p-4 bg-text-primary self-start mt-32 max-w-screen-md rounded-md"
           >
             <slot />
             <button
-              class="text-text-primary my-8 bg-weather-primary py-2 px-6"
+              class="justify-center text-text-primary my-8 bg-weather-primary py-2 px-6 rounded-md duration-150 hover:bg-weather-secondary"
               @click="$emit('close-modal')"
             >
               Close
