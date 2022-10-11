@@ -1,3 +1,4 @@
+
 <template>
   <div v-for="city in savedCities" :key="city.id">
     <CityCard :city="city" @click="goToCityView(city)" />
@@ -13,7 +14,6 @@ import axios from "axios";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import CityCard from "./CityCard.vue";
-
 const savedCities = ref([]);
 const API_KEY = "f3f2eb8da178081b60066bdf34143e33";
 const getCities = async () => {
@@ -28,17 +28,14 @@ const getCities = async () => {
       );
     });
     const weatherData = await Promise.all(requests);
-
     // Flicker delay
     await new Promise((res) => setTimeout(res, 300));
-
     weatherData.forEach((value, index) => {
       savedCities.value[index].weather = value.data;
     });
   }
 };
 await getCities();
-
 const router = useRouter();
 const goToCityView = (city) => {
   router.push({
