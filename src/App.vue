@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen font-Roboto bg-weather-primary ">
+  <div class="flex flex-col min-h-screen font-Roboto bg-weather-primary dark:bg-weather-secondary--light ">
     <SiteNavigation />
     <RouterView v-slot="{ Component }">
       <!-- Set page transition animation -->
