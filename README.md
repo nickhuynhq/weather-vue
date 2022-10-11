@@ -1,6 +1,7 @@
 # Weather Vue.
 
 **Weather Vue allows you to track the current and future weather of cities of your choosing.**
+
 **Current Features Include:**
 - City Search
 - Current Weather
