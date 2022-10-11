@@ -1,6 +1,13 @@
 # Weather Vue.
 
 **Weather Vue allows you to track the current and future weather of cities of your choosing.**
+**Current Features Include:**
+- City Search
+- Current Weather
+- Hourly Weather
+- Weekly Weather
+- Saving Cities
+- Deleting Cities
 
 This project was created to experiment with Tailwind CSS and is my first project using Vue.js! 😆
 All in all, got a great introduction to the Vue framework and learnt a new way of styling using Tailwind! 
