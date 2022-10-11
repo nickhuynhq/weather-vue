@@ -4,7 +4,7 @@
 
 This project was created to experiment with Tailwind CSS and is my first project using Vue.js! 😆
 All in all, got a great introduction to the Vue framework and learnt a new way of styling using Tailwind! 
-![Swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)
+
 
 Please use this link to demo the live site!
 https://weather-vue-tw.netlify.app/
@@ -47,3 +47,5 @@ $ npm install
 ## Author
 
 Nicholas Huynh [@nickhuynhq](https://github.com/nickhuynhq)
+
+![Swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)
