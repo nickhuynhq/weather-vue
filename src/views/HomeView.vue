@@ -55,7 +55,7 @@ const previewCity = (searchResult) => {
 </script>
 
 <template>
-  <main class="container text-white">
+  <main class="container text-text-primary h-auto">
     <div class="pt-4 mb-8 relative">
       <input
         type="text"
@@ -65,7 +65,7 @@ const previewCity = (searchResult) => {
         class="py-2 px-1 w-full bg-transparent border-b focus:border-weather-secondary focus:outline-none focus:shadow-[0px_1px_0_0#004E71]"
       />
       <ul
-        class="absolute bg-weather-secondary text-white w-full shadow-md py-2 px-1 top-[66px]"
+        class="absolute bg-weather-secondary text-text-primary w-full shadow-md py-2 px-1 top-[66px]"
         v-if="querySearchResults"
       >
         <p v-if="searchError">

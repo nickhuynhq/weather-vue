@@ -3,7 +3,7 @@
     <!-- Banner -->
     <div
       v-if="route.query.preview"
-      class="text-white p-4 bg-weather-secondary w-full text-center"
+      class="text-text-primary p-4 bg-weather-secondary w-full text-center"
     >
       <p>
         You are currently previewing this city, click the "+" icon to start
@@ -11,7 +11,7 @@
       </p>
     </div>
     <!-- Weather Overview -->
-    <div class="flex flex-col items-center text-white py-12">
+    <div class="flex flex-col items-center text-text-primary py-12">
       <h1 class="text-4xl mb-2">{{ route.params.city }}</h1>
       <p class="text-sm mb-12">
         {{
@@ -43,11 +43,11 @@
       />
     </div>
 
-    <hr class="border-white border-opacity-10 border w-full" />
+    <hr class="border-text-primary border-opacity-10 border w-full" />
 
     <!-- Hourly Weather -->
     <div class="max-w-screen-md w-full py-12">
-      <div class="mx-8 text-white">
+      <div class="mx-8 text-text-primary">
         <h2 class="mb-4">Hourly Weather</h2>
         <div class="flex gap-10 overflow-x-scroll">
           <div
@@ -55,7 +55,7 @@
             :key="hourData.dt"
             class="flex flex-col gap-4 items-center"
           >
-            <p class="whitespace-nowrap text-md">
+            <p class="text-primaryspace-nowrap text-md">
               {{
                 new Date(hourData.currentTime).toLocaleTimeString("en-us", {
                   hour: "numeric",
@@ -72,11 +72,11 @@
       </div>
     </div>
 
-    <hr class="border-white border-opacity-10 border w-full" />
+    <hr class="border-text-primary border-opacity-10 border w-full" />
 
     <!-- Weekly Weather -->
     <div class="max-w-screen-md w-full py-12">
-      <div class="mx-8 text-white">
+      <div class="mx-8 text-text-primary">
         <h2 class="mb-4">7 Day Forecast</h2>
         <div
           v-for="day in weatherData.daily"
@@ -104,11 +104,11 @@
     </div>
 
     <div
-      class="flex items-center gap-2 py-12 text-white cursor-pointer duration-150 hover:text-red-500"
+      class="flex items-center gap-2 py-12 mb-20 text-xl text-text-primary cursor-pointer duration-150 hover:text-red-500"
       @click="removeCity"
     >
       <i class="fa-solid fa-trash" />
-      <p>Remove City</p>
+      <p >Remove City</p>
     </div>
   </div>
 </template>
