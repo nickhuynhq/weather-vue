@@ -18,6 +18,9 @@ import Footer from './components/Footer.vue';
 </script>
 
 <style>
+html.dark{
+  color-scheme: dark;
+}
 .page-enter-active {
   transition: 600ms ease all;
 }

@@ -7,8 +7,8 @@
     >
       <i class="fa-solid fa-circle-info text-xl" />
       <p>
-        You are currently previewing this city, click the "+" icon at the top right to start
-        tracking this city.
+        You are currently previewing this city, click the "+" icon at the top
+        right to start tracking this city.
       </p>
     </div>
     <!-- Weather Overview -->
@@ -109,7 +109,7 @@
       @click="removeCity"
     >
       <i class="fa-solid fa-trash" />
-      <p >Remove City</p>
+      <p>Remove City</p>
     </div>
   </div>
 </template>
