@@ -67,6 +67,7 @@ $ npm install
 ```
 
 4. Compile Vue App
+
 ```$ npm run dev```
 
 ## Author
