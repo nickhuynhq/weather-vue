@@ -9,6 +9,7 @@
 - Weekly Weather
 - Saving Cities
 - Deleting Cities
+- **DARK MODE** 😈
 
 This project was created to experiment with Tailwind CSS and is my first project using Vue.js! 😆
 Weather data is pulled from OpenWeatherMap's API:
