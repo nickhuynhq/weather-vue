@@ -22,6 +22,7 @@ https://weather-vue-tw.netlify.app/
 
 
 ## Update Log
+**(October 11, 2022)**
 - Add Dark Mode Functionality
 - Minor Bug Fixes
 - Formatting adjustments
