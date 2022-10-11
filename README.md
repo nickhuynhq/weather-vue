@@ -56,13 +56,17 @@ https://user-images.githubusercontent.com/71597829/195152578-4e5c0ff5-68c0-4acb-
 
 
 2. Run `npm install` from inside the client directory.
-
 ```bash
 $ cd weather-vue
 $ npm install
 ```
 
-3. Compile Vue App
+3. Create your own .env file
+```
+  VITE_API_KEY=<YOUR_API_KEY>
+```
+
+4. Compile Vue App
 ```$ npm run dev```
 
 ## Author
