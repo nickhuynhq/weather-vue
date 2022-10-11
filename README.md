@@ -24,7 +24,7 @@ https://weather-vue-tw.netlify.app/
 ![App Screenshot](https://firebasestorage.googleapis.com/v0/b/weather-vue-f1edf.appspot.com/o/weather-vue.jpg?alt=media&token=0a844faa-4f2e-4df7-8612-0740d23c7e62)
 
 ## Project DEMO
-https://user-images.githubusercontent.com/71597829/195012452-6751d45b-a344-4c79-a9ce-841fd4618551.mp4
+https://user-images.githubusercontent.com/71597829/195034535-b4e596c2-a745-44be-8fa3-061c63f34ea0.mp4
 
 ## Tech Stack
 ![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
@@ -45,7 +45,6 @@ https://user-images.githubusercontent.com/71597829/195012452-6751d45b-a344-4c79-
 
 
 2. Run `npm install` from inside the client directory.
-
 
 ```bash
 $ cd weather-vue
