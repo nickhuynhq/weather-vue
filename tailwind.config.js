@@ -11,6 +11,13 @@ module.exports = {
         "text-primary": "white",
         "text-secondary": "black",
         "text-hover": "#a3be8c",
+        // "header": "#a3be8c",
+        // "weather-primary": "#eceff4",
+        // "weather-secondary": "#d8dee9",
+        // "alert": "#ebcb8b",
+        // "text-primary": "#4c566a",
+        // "text-secondary": "black",
+        // "text-hover": "#a3be8c",
       }
     },
     fontFamily: {

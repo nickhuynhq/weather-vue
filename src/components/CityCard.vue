@@ -5,18 +5,14 @@
       <h3>{{ city.state }}</h3>
     </div>
     <div class="flex flex-col gap-2">
-      <div class=" flex justify-center items-center gap-2">
-        <img
-          class="w-[50px] h-auto bg-white rounded-md"
-          :src="`https://openweathermap.org/img/wn/${city.weather.weather[0].icon}@2x.png`"
-        />
+      <div class=" flex justify-end items-center gap-2">
         <p class="text-3xl self-end">
           {{ Math.round(city.weather.main.temp)}}&deg;
         </p>
       </div>
-      
+      <p class=" flex justify-end items-center">{{ city.weather.weather[0].main }}</p>
       <div class="flex gap-2">
-        <span class="text-xs">
+        <span class="text-sm items-end mt-0">
           H: {{Math.round(city.weather.main.temp_max)}}&deg;
           L: {{Math.round(city.weather.main.temp_min)}}&deg;
         </span>
