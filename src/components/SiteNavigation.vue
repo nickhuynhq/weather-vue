@@ -146,7 +146,7 @@ const toggleModal = () => {
   modalActive.value = !modalActive.value;
 };
 
-const API_KEY = "f3f2eb8da178081b60066bdf34143e33";
+const API_KEY = config.API_KEY;
 const searchQuery = ref("");
 const searchLimit = 5;
 const searchError = ref(null);

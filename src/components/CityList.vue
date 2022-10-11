@@ -15,7 +15,7 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import CityCard from "./CityCard.vue";
 const savedCities = ref([]);
-const API_KEY = "f3f2eb8da178081b60066bdf34143e33";
+const API_KEY = config.API_KEY;
 const getCities = async () => {
   if (localStorage.getItem("savedCities")) {
     savedCities.value = JSON.parse(localStorage.getItem("savedCities"));
