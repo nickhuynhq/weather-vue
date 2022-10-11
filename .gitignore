@@ -18,6 +18,7 @@ coverage
 /cypress/screenshots/
 
 README.md
+README.txt
 
 # Editor directories and files
 .vscode/*
