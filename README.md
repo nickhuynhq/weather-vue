@@ -31,7 +31,11 @@ https://weather-vue-tw.netlify.app/
 ![App Screenshot](https://firebasestorage.googleapis.com/v0/b/weather-vue-f1edf.appspot.com/o/weather-vue.jpg?alt=media&token=73dd1a20-1a8b-4bd8-9337-3fb7bcc19dda)
 
 ## Project DEMO
-https://user-images.githubusercontent.com/71597829/195034535-b4e596c2-a745-44be-8fa3-061c63f34ea0.mp4
+
+
+https://user-images.githubusercontent.com/71597829/195152578-4e5c0ff5-68c0-4acb-9d60-259e3ebc2524.mp4
+
+
 
 ## Tech Stack
 ![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
