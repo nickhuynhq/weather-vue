@@ -1,5 +1,5 @@
 <template>
-  <main class="container text-text-primary h-[85vh]">
+  <main class="container text-text-primary h-screen">
     <div class="pt-4 mb-8 relative overflow-y-auto">
       <!-- <input
         type="text"

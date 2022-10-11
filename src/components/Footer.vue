@@ -1,5 +1,5 @@
 <template>
-  <header class=" bottom-0 left-0 w-full bg-header py-4">
+  <footer class="sticky bottom-0 w-full bg-header py-4">
     <nav
       class="container flex justify-between sm:flex-col md:flex-row items-center gap-6 text-text-primary"
     >
@@ -43,7 +43,7 @@
         />
       </span>
     </nav>
-  </header>
+  </footer>
 </template>
 
 <script setup></script>
