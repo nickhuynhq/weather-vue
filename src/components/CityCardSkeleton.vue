@@ -1,5 +1,5 @@
 <template>
-  <div class="flex p-6 px-3 bg-weather-secondary rounded-md shadow-md">
+  <div class="flex p-6 px-3 bg-weather-secondary dark:bg-weather-secondary--light rounded-md shadow-md">
     <div class="flex flex-col flex-1 gap-2">
       <AnimatedPlaceholder class="max-w-[50%]" />
       <AnimatedPlaceholder class="max-w-[40%]" />

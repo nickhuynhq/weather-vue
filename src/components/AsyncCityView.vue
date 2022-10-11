@@ -7,12 +7,12 @@
     >
       <i class="fa-solid fa-circle-info text-xl" />
       <p>
-        You are currently previewing this city, click the "+" icon at the top right to start
-        tracking this city.
+        You are currently previewing this city, click the "+" icon at the top
+        right to start tracking this city.
       </p>
     </div>
     <!-- Weather Overview -->
-    <div class="flex flex-col items-center text-text-primary py-12">
+    <div class="flex flex-col items-center text-text-primary dark:text-text-primary--light py-12">
       <h1 class="text-4xl mb-2">{{ route.params.city }}</h1>
       <p class="text-sm mb-12">
         {{
@@ -47,9 +47,9 @@
     <hr class="border-text-primary border-opacity-10 border w-full" />
 
     <!-- Hourly Weather -->
-    <div class="max-w-screen-md w-full py-12">
-      <div class="mx-8 text-text-primary">
-        <h2 class="mb-4">Hourly Weather</h2>
+    <div class="max-w-screen-md w-full py-12 ">
+      <div class="mx-8 text-text-primary dark:text-text-primary--light">
+        <h2 class="mb-4 text-2xl">Hourly Weather</h2>
         <div class="flex gap-10 overflow-x-scroll">
           <div
             v-for="hourData in weatherData.hourly"
@@ -77,8 +77,8 @@
 
     <!-- Weekly Weather -->
     <div class="max-w-screen-md w-full py-12">
-      <div class="mx-8 text-text-primary">
-        <h2 class="mb-4">7 Day Forecast</h2>
+      <div class="mx-8 text-text-primary dark:text-text-primary--light">
+        <h2 class="mb-4 text-2xl">7 Day Forecast</h2>
         <div
           v-for="day in weatherData.daily"
           :key="day.dt"
@@ -104,13 +104,13 @@
       </div>
     </div>
 
-    <div
-      class="flex items-center gap-2 py-12 mb-20 text-xl text-text-primary cursor-pointer duration-150 hover:text-red-500"
+    <button
+      class="flex items-center gap-2 py-2 px-4 rounded-md mb-20 text-xl text-text-primary dark:text-text-primary--light cursor-pointer duration-150 bg-weather-secondary dark:bg-weather-primary--light hover:bg-red-500"
       @click="removeCity"
     >
       <i class="fa-solid fa-trash" />
-      <p >Remove City</p>
-    </div>
+      <p>Remove City</p>
+  </button>
   </div>
 </template>
 
