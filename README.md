@@ -23,6 +23,11 @@ https://weather-vue-tw.netlify.app/
 
 
 ## Update Log
+**(October 12, 2022)**
+- Fix bug where page load is not at top
+- Adjust DarkMode styling for components
+- Add local time to City Cards
+
 **(October 11, 2022)**
 - Add Dark Mode Functionality
 - Minor Bug Fixes
