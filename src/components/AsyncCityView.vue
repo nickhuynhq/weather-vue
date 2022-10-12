@@ -11,9 +11,28 @@
         right to start tracking this city.
       </p>
     </div>
+
+    <!-- Top Button Container -->
+    <div
+      class="container flex w-full px-10 pt-8 justify-end gap-3 text-2xl text-text-primary dark:text-text-primary--light"
+    >
+      <i
+        v-if="!route.query.preview"
+        title="Remove City"
+        class="fa-solid fa-trash hover:scale-125 duration-150 cursor-pointer hover:text-red-500"
+        @click="removeCity"
+      />
+      <i
+        title="Add City"
+        class="fa-solid fa-plus hover:scale-125 duration-150 cursor-pointer"
+        @click="addCity"
+        v-if="route.query.preview"
+      />
+    </div>
+
     <!-- Weather Overview -->
     <div
-      class="flex flex-col items-center text-text-primary dark:text-text-primary--light py-12"
+      class="flex flex-col items-center text-text-primary dark:text-text-primary--light pt-6"
     >
       <h1 class="text-4xl mb-2">{{ route.params.city }}</h1>
       <p class="text-sm mb-12">
@@ -105,20 +124,14 @@
         </div>
       </div>
     </div>
-
-    <button
-      class="flex items-center gap-2 py-2 px-4 rounded-md mb-20 text-xl text-text-primary dark:text-text-primary--light cursor-pointer duration-150 bg-weather-secondary dark:bg-weather-primary--light hover:bg-red-500"
-      @click="removeCity"
-    >
-      <i class="fa-solid fa-trash" />
-      <p>Remove City</p>
-    </button>
   </div>
 </template>
 
 <script setup>
 import axios from "axios";
 import { useRoute, useRouter } from "vue-router";
+import { ref } from "vue";
+import { uid } from "uid";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const route = useRoute();
@@ -161,6 +174,34 @@ const removeCity = () => {
   router.push({
     name: "home",
   });
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
+};
+
+const savedCities = ref([]);
+
+const addCity = () => {
+  if (localStorage.getItem("savedCities")) {
+    savedCities.value = JSON.parse(localStorage.getItem("savedCities"));
+  }
+
+  const locationObj = {
+    id: uid(),
+    state: route.params.state,
+    city: route.params.city,
+    coords: {
+      lon: route.query.lon,
+      lat: route.query.lat,
+    },
+  };
+
+  // Set City in local storage
+  savedCities.value.push(locationObj);
+  localStorage.setItem("savedCities", JSON.stringify(savedCities.value));
+
+  // Remove the preview from route when the City is added
+  let query = Object.assign({}, route.query);
+  delete query.preview;
+  query.id = locationObj.id;
+  router.replace({ query });
 };
 </script>
