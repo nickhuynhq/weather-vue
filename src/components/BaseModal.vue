@@ -10,7 +10,7 @@
         <Transition name="modal-inner">
           <div
             v-if="modalActive"
-            class="flex flex-col p-4 bg-weather-primary dark:bg-weather-primary--light self-start mt-32 max-w-screen-md rounded-md"
+            class="flex flex-col p-4 bg-weather-secondary dark:bg-weather-primary--light self-start mt-32 max-w-screen-md rounded-md"
           >
             <slot />
             <button
