@@ -3,6 +3,7 @@
     <div class="flex flex-col flex-1">
       <h2 class="text-3xl">{{ city.city }}</h2>
       <h3>{{ city.state }}</h3>
+      <h3>{{ new Date(utc + (1000 * -(city.weather.timezone))).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})  }}</h3>
     </div>
     <div class="flex flex-col gap-2">
       <div class=" flex justify-end items-center gap-2">
@@ -22,11 +23,21 @@
 </template>
 
 <script setup>
+
+const d = new Date()
+const localTime = d.getTime()
+const localOffset = d.getTimezoneOffset() * 60000
+const utc = localTime + localOffset
+// const time = utc + (1000 * -(city.weather.timezone))
+// nd = new Date(time)
+
 defineProps({
   city: {
     type: Object,
     default: () => {},
   },
 });
+
+
 
 </script>
