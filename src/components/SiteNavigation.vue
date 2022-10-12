@@ -3,7 +3,7 @@
     <nav
       class="container flex flex-col sm:flex-row items-center gap-4 text-text-primary  dark:text-text-primary--light py-6"
     >
-      <RouterLink :to="{ name: 'home' }">
+      <RouterLink :to="{ name: 'home' }" @click="scrollTop">
         <div
           class="flex items-center gap-3 duration-150 hover:scale-105"
         >
@@ -117,6 +117,10 @@ const savedCities = ref([]);
 const route = useRoute();
 const router = useRouter();
 
+const scrollTop = () => {
+  window.scrollTo(0,0);
+}
+
 const addCity = () => {
   if (localStorage.getItem("savedCities")) {
     savedCities.value = JSON.parse(localStorage.getItem("savedCities"));
@@ -193,5 +197,7 @@ function previewCity(searchResult){
       preview: true,
     },
   });
+
+  window.scrollTo(0,0);
 };
 </script>

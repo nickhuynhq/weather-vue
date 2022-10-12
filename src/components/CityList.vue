@@ -1,10 +1,11 @@
 <template>
   <div>
     <div v-for="city in savedCities" :key="city.id">
-      <CityCard :city="city" @click="goToCityView(city)" />
+      <CityCard :city="city" @click="goToCityView(city), scrollTop()" />
     </div>
 
-    <p v-if="savedCities.length === 0">
+    <p class="text-text-primary dark:text-text-primary--light" v-if="savedCities.length === 0">
+      <i class="fa-solid fa-circle-info" />
       No locations added. To start tracking a location, search in the field
       above.
     </p>
@@ -16,6 +17,10 @@ import axios from "axios";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import CityCard from "./CityCard.vue";
+
+const scrollTop = () => {
+  window.scrollTo(0,0);
+}
 
 const savedCities = ref([]);
 const API_KEY = import.meta.env.VITE_API_KEY;

@@ -12,7 +12,9 @@
       </p>
     </div>
     <!-- Weather Overview -->
-    <div class="flex flex-col items-center text-text-primary dark:text-text-primary--light py-12">
+    <div
+      class="flex flex-col items-center text-text-primary dark:text-text-primary--light py-12"
+    >
       <h1 class="text-4xl mb-2">{{ route.params.city }}</h1>
       <p class="text-sm mb-12">
         {{
@@ -47,7 +49,7 @@
     <hr class="border-text-primary border-opacity-10 border w-full" />
 
     <!-- Hourly Weather -->
-    <div class="max-w-screen-md w-full py-12 ">
+    <div class="max-w-screen-md w-full py-12">
       <div class="mx-8 text-text-primary dark:text-text-primary--light">
         <h2 class="mb-4 text-2xl">Hourly Weather</h2>
         <div class="flex gap-10 overflow-x-scroll">
@@ -110,7 +112,7 @@
     >
       <i class="fa-solid fa-trash" />
       <p>Remove City</p>
-  </button>
+    </button>
   </div>
 </template>
 
@@ -159,5 +161,6 @@ const removeCity = () => {
   router.push({
     name: "home",
   });
+  window.scrollTo(0,0);
 };
 </script>
