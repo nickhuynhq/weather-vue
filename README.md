@@ -21,21 +21,6 @@ All in all, got a great introduction to the Vue framework and learnt a new way o
 Please use this link to demo the live site!
 https://weather-vue-tw.netlify.app/
 
-
-## Update Log
-**(October 12, 2022)**
-- Fix bug where page load is not at top
-- Adjust DarkMode styling for components
-- Add local time to City Cards
-
-**(October 11, 2022)**
-- Add Dark Mode Functionality
-- Minor Bug Fixes
-- Formatting adjustments
-
-## Project Screenshot
-![App Screenshot](https://firebasestorage.googleapis.com/v0/b/weather-vue-f1edf.appspot.com/o/weather-vue.jpg?alt=media&token=73dd1a20-1a8b-4bd8-9337-3fb7bcc19dda)
-
 ## Project DEMO
 
 
@@ -50,6 +35,20 @@ https://user-images.githubusercontent.com/71597829/195152578-4e5c0ff5-68c0-4acb-
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+
+## Update Log
+**(October 12, 2022)**
+- Fix bug where page load is not at top
+- Adjust DarkMode styling for components
+- Add local time to City Cards
+
+**(October 11, 2022)**
+- Add Dark Mode Functionality
+- Minor Bug Fixes
+- Formatting adjustments
+
+## Project Screenshot
+![App Screenshot](https://firebasestorage.googleapis.com/v0/b/weather-vue-f1edf.appspot.com/o/weather-vue.jpg?alt=media&token=73dd1a20-1a8b-4bd8-9337-3fb7bcc19dda)
 
 ## Recommended IDE Setup
 
