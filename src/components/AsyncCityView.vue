@@ -14,17 +14,17 @@
 
     <!-- Top Button Container -->
     <div
-      class="container flex w-full px-10 pt-8 justify-end gap-3 text-text-primary dark:text-text-primary--light"
+      class="container flex w-full px-10 pt-8 justify-end gap-3 text-2xl text-text-primary dark:text-text-primary--light"
     >
       <i
         v-if="!route.query.preview"
         title="Remove City"
-        class="fa-solid fa-trash hover:scale-125 duration-150 text-3xl cursor-pointer hover:text-red-500"
+        class="fa-solid fa-trash hover:scale-125 duration-150 cursor-pointer hover:text-red-500"
         @click="removeCity"
       />
       <i
         title="Add City"
-        class="fa-solid fa-plus hover:scale-125 duration-150 text-4xl cursor-pointer"
+        class="fa-solid fa-plus hover:scale-125 duration-150 cursor-pointer"
         @click="addCity"
         v-if="route.query.preview"
       />
