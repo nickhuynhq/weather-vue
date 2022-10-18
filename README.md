@@ -41,15 +41,17 @@ https://user-images.githubusercontent.com/71597829/195152578-4e5c0ff5-68c0-4acb-
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
 ## Update Log
+**(October 18, 2022)**
+- Fix local time on City Cards
+
 **(October 12, 2022)**
 - Fix bug where page load is not at top
 - Adjust DarkMode styling for components
 - Add local time to City Cards
-
-**(October 11, 2022)**
 - Add Dark Mode Functionality
 - Minor Bug Fixes
 - Formatting adjustments
+
 
 ## Recommended IDE Setup
 
