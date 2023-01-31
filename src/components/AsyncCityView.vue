@@ -136,10 +136,13 @@ import { uid } from "uid";
 const API_KEY = import.meta.env.VITE_API_KEY;
 const route = useRoute();
 
+const lat = ref(route.query.lat);
+const lon = ref(route.query.lon);
+
 const getWeatherData = async () => {
   try {
     const weatherData = await axios.get(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${route.query.lat}&lon=${route.query.lon}&appid=${API_KEY}&units=metric`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat.value}&lon=${lon.value}&appid=${API_KEY}&units=metric`
     );
 
     // Calculate current date & time

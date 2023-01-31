@@ -157,7 +157,7 @@ const getSearchResults = () => {
   }, 300);
 };
 
-function previewCity(searchResult) {
+const previewCity = (searchResult) => {
   const city = searchResult.name;
   const state = searchResult.state || searchResult.country;
   const country = searchResult.country;
