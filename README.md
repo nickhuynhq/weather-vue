@@ -18,7 +18,7 @@ https://weather-vue-tw.netlify.app/
 ## Project DEMO
 https://user-images.githubusercontent.com/71597829/195152578-4e5c0ff5-68c0-4acb-9d60-259e3ebc2524.mp4
 
-##Current Features Include:
+## Current Features Include:
 - City Search 🔎
 - Current Weather 🌤
 - Hourly Weather 🌦
@@ -36,7 +36,7 @@ https://user-images.githubusercontent.com/71597829/195152578-4e5c0ff5-68c0-4acb-
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
 ## Update Log
-**(Jan 30, 2023)**
+**(January 30, 2023)**
 - Fix issue of info not updating when new City is searched on City View
 
 **(October 18, 2022)**
