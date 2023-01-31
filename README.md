@@ -9,7 +9,7 @@ https://openweathermap.org/api
 All in all, got a great introduction to the Vue framework and learnt a new way of styling using Tailwind! 
 
 Please use this link to demo the live site!
-https://weather-vue-tw.netlify.app/
+weather-vue.nickhuynhq.com/
 
 
 ## Project Screenshot
