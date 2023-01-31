@@ -32,7 +32,7 @@
 
     <!-- Weather Overview -->
     <div
-      class="flex flex-col items-center text-text-primary dark:text-text-primary--light pt-6"
+      class="flex flex-col items-center text-text-primary dark:text-text-primary--light py-6"
     >
       <h1 class="text-4xl mb-2">{{ route.params.city }}</h1>
       <p class="text-sm mb-12">
@@ -60,7 +60,7 @@
         {{ weatherData.current.weather[0].description }}
       </p>
       <img
-        class="w-[150px] h-auto"
+        class="w-[150px] h-auto dark:bg-slate-300 bg-slate-500 rounded-xl mt-4"
         :src="`https://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}@2x.png`"
       />
     </div>
@@ -68,16 +68,16 @@
     <hr class="border-text-primary border-opacity-10 border w-full" />
 
     <!-- Hourly Weather -->
-    <div class="max-w-screen-md w-full py-12">
+    <div class="max-w-screen-md py-12">
       <div class="mx-8 text-text-primary dark:text-text-primary--light">
         <h2 class="mb-4 text-2xl">Hourly Weather</h2>
-        <div class="flex gap-10 overflow-x-scroll">
+        <div class="flex overflow-x-scroll gap-6 pb-6">
           <div
             v-for="hourData in weatherData.hourly"
             :key="hourData.dt"
-            class="flex flex-col gap-4 items-center"
+            class="flex flex-col justify-between gap-4 min-w-[50px] items-center"
           >
-            <p class="text-primaryspace-nowrap text-md">
+            <p class="text-primary text-md flex-wrap">
               {{
                 new Date(hourData.currentTime).toLocaleTimeString("en-us", {
                   hour: "numeric",
@@ -85,7 +85,7 @@
               }}
             </p>
             <img
-              class="w-auto h-[50px] object-cover"
+              class=" dark:bg-slate-300 bg-slate-500 rounded-lg object-cover"
               :src="`https://openweathermap.org/img/wn/${hourData.weather[0].icon}@2x.png`"
             />
             <p class="text-xl">{{ Math.round(hourData.temp) }}&deg;</p>
@@ -103,19 +103,21 @@
         <div
           v-for="day in weatherData.daily"
           :key="day.dt"
-          class="flex items-center"
+          class="flex items-center mb-2"
         >
           <p class="flex-1">
             {{
               new Date(day.dt * 1000).toLocaleDateString("en-us", {
                 weekday: "long",
+                day: 'numeric',
+                month: 'short'
               })
             }}
           </p>
           <img
-            class="w-[50px] h-[50px] object-cover"
+            class="w-[50px] h-[50px] dark:bg-slate-300 bg-slate-500 rounded-lg object-cover"
             :src="`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`"
-            alt=""
+            alt="weather"
           />
           <div class="flex gap-2 flex-1 justify-end">
             <p>H: {{ Math.round(day.temp.max) }}</p>
