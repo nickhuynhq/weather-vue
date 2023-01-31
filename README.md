@@ -2,21 +2,11 @@
 
 **Weather Vue allows you to track the current and future weather of cities of your choosing.**
 
-**Current Features Include:**
-- City Search 🔎
-- Current Weather 🌤
-- Hourly Weather 🌦
-- Weekly Weather ⛈
-- Saving Cities 💾
-- Deleting Cities 🗑
-- **DARK MODE** 😈
-
 This project was created to experiment with Tailwind CSS and is my first project using Vue.js! 😆
 Weather data is pulled from OpenWeatherMap's API:
 https://openweathermap.org/api
 
 All in all, got a great introduction to the Vue framework and learnt a new way of styling using Tailwind! 
-
 
 Please use this link to demo the live site!
 https://weather-vue-tw.netlify.app/
@@ -28,6 +18,14 @@ https://weather-vue-tw.netlify.app/
 ## Project DEMO
 https://user-images.githubusercontent.com/71597829/195152578-4e5c0ff5-68c0-4acb-9d60-259e3ebc2524.mp4
 
+##Current Features Include:
+- City Search 🔎
+- Current Weather 🌤
+- Hourly Weather 🌦
+- Weekly Weather ⛈
+- Saving Cities 💾
+- Deleting Cities 🗑
+- **DARK MODE** 😈
 
 ## Tech Stack
 ![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
@@ -38,6 +36,9 @@ https://user-images.githubusercontent.com/71597829/195152578-4e5c0ff5-68c0-4acb-
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
 ## Update Log
+**(Jan 30, 2023)**
+- Fix issue of info not updating when new City is searched on City View
+
 **(October 18, 2022)**
 - Fix local time on City Cards
 
