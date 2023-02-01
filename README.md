@@ -38,6 +38,7 @@ https://user-images.githubusercontent.com/71597829/195152578-4e5c0ff5-68c0-4acb-
 ## Update Log
 **(January 30, 2023)**
 - Fix issue of info not updating when new City is searched on City View
+- Update weather icons to have background for better visibility/accessibility 
 
 **(October 18, 2022)**
 - Fix local time on City Cards
