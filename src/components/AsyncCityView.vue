@@ -68,7 +68,7 @@
     <hr class="border-text-primary border-opacity-10 border w-full" />
 
     <!-- Hourly Weather -->
-    <div class="max-w-screen-md py-12">
+    <div class="max-w-screen-md w-full py-12">
       <div class="mx-8 text-text-primary dark:text-text-primary--light">
         <h2 class="mb-4 text-2xl">Hourly Weather</h2>
         <div class="flex overflow-x-scroll gap-6 pb-6">
