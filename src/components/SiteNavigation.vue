@@ -51,7 +51,7 @@
           <h2 class="text-2xl">Removing a city</h2>
           <p class="mb-4">
             If you no longer wish to track a city, simply select the city within
-            the home page. At the bottom of the page, there will be am option to
+            the home page. At the top right of the page, there will be an waste bin icon to
             delete the city.
           </p>
 
