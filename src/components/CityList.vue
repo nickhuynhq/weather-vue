@@ -31,7 +31,7 @@ const getCities = async () => {
     savedCities.value.forEach((city) => {
       requests.push(
         axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${city.coords.lat}&lon=${city.coords.lon}&appid=${API_KEY}&units=metric`
+          `https://api.openweathermap.org/data/3.0/weather?lat=${city.coords.lat}&lon=${city.coords.lon}&appid=${API_KEY}&units=metric`
         )
       );
     });
