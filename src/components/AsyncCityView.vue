@@ -144,7 +144,7 @@ const lon = ref(route.query.lon);
 const getWeatherData = async () => {
   try {
     const weatherData = await axios.get(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat.value}&lon=${lon.value}&appid=${API_KEY}&units=metric`
+      `https://api.openweathermap.org/data/3.0/onecall?lat=${lat.value}&lon=${lon.value}&appid=${API_KEY}&units=metric`
     );
 
     // Calculate current date & time
