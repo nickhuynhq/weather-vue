@@ -14,7 +14,7 @@
 
     <!-- Top Button Container -->
     <div
-      class="container flex w-full px-10 pt-8 justify-end gap-3 text-2xl text-text-primary dark:text-text-primary--light"
+      class="container max-w-[48rem] flex w-full px-10 pt-8 justify-end gap-3 text-2xl text-text-primary dark:text-text-primary--light"
     >
       <i
         v-if="!route.query.preview"
