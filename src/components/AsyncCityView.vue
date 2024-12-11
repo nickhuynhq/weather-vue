@@ -61,7 +61,7 @@
       </p>
       <img
         class="w-[150px] h-auto dark:bg-slate-300 bg-slate-500 rounded-xl mt-4"
-        :src="`https://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}@2x.png`"
+        :src="`https://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}@4x.png`"
       />
     </div>
 
