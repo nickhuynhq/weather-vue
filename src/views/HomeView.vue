@@ -1,6 +1,6 @@
 
 <template>
-  <main class="container text-text-primary h-screen overflow-y-auto mb-10">
+  <main class="container text-text-primary">
     <div class="pt-4 mb-8 relative ">
     </div>
     <div class="flex flex-col gap-4">
