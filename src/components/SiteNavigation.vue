@@ -3,7 +3,7 @@
     class="sticky top-0 bg-header dark:bg-weather-primary--light shadow-lg"
   >
     <nav
-      class="container flex flex-col sm:flex-row items-center gap-4 text-text-primary dark:text-text-primary--light py-6"
+      class="container max-w-[48rem] flex flex-col sm:flex-row items-center gap-4 text-text-primary dark:text-text-primary--light py-6"
     >
       <RouterLink :to="{ name: 'home' }" @click="scrollTop">
         <div class="flex items-center gap-3 duration-150 hover:scale-105">
@@ -64,7 +64,7 @@
     </nav>
 
     <div
-      class="container flex flex-col items-center text-text-primary dark:text-text-primary--light"
+      class="container max-w-[48rem] flex flex-col items-center text-text-primary dark:text-text-primary--light"
     >
       <input
         type="text"
@@ -78,7 +78,7 @@
         class="border-text-primary dark:border-text-primary--light border w-full"
       />
       <ul
-        class="container flex flex-col gap-3 rounded-md bg-weather-secondary dark:bg-weather-primary--light text-text-primary dark:text-text-primary--light w-full shadow-md py-2 px-4 mt-4"
+        class="container max-w-[48rem] flex flex-col gap-3 rounded-md bg-weather-secondary dark:bg-weather-primary--light text-text-primary dark:text-text-primary--light w-full shadow-md py-2 px-4 mt-4"
         v-if="querySearchResults"
       >
         <p

@@ -1,6 +1,6 @@
 <template>
   <footer class="sticky bottom-0 w-full bg-header dark:bg-weather-primary--light py-4">
-    <nav class="container flex justify-between sm:flex-col md:flex-row items-center gap-6 text-text-primary dark:text-text-primary--light">
+    <nav class="container  max-w-[48rem] flex justify-between sm:flex-col md:flex-row items-center gap-6 text-text-primary dark:text-text-primary--light">
       <div class="items-center gap-6">
         <a href="https://github.com/nickhuynhq" target="_blank" rel="noopener noreferrer">
           <div class="flex items-center gap-3 duration-150 hover:scale-105">
