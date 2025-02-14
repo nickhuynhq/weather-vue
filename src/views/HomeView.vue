@@ -1,6 +1,6 @@
 
 <template>
-  <main class="container max-w-[48rem] text-text-primary">
+  <main class="container text-text-primary max-w-[48rem] min-h-screen" >
     <div class="pt-4 mb-8 relative ">
     </div>
     <div class="flex flex-col gap-4">
